@@ -26,6 +26,14 @@ export const Navbar = () => {
             >
                 DC
             </NavLink>
+            <NavLink
+                activeClassName="active"
+                className="flex-auto text-white"
+                exact
+                to="/search"
+            >
+                Search
+            </NavLink>
 
             <NavLink
                 activeClassName="active"
