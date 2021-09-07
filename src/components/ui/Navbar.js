@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { authContext } from '../../auth/AuthContext'
 
 export const Navbar = () => {
+    const { user } = useContext(authContext)
+
     return (
         <nav className="flex px-8 py-4 bg-blue-500">
             <Link
@@ -34,7 +37,7 @@ export const Navbar = () => {
             >
                 Search
             </NavLink>
-
+            <span className='mx-2'>{user.name}</span>
             <NavLink
                 activeClassName="active"
                 className="text-white"
